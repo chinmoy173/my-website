@@ -15,6 +15,12 @@ pipeline {
           }
         }
 
+        stage('testtt') {
+          steps {
+            echo 'is it possible'
+          }
+        }
+
       }
     }
 
