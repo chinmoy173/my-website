@@ -19,9 +19,20 @@ pipeline {
     }
 
     stage('Bees Bees') {
-      steps {
-        echo 'Bees Buzz'
-        echo 'Bees Buzzing Again'
+      parallel {
+        stage('Bees Bees') {
+          steps {
+            echo 'Bees Buzz'
+            echo 'Bees Buzzing Again'
+          }
+        }
+
+        stage('Testing the branch') {
+          steps {
+            echo 'I am done'
+          }
+        }
+
       }
     }
 
