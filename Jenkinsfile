@@ -6,6 +6,7 @@ pipeline {
         stage('Buzz Build') {
           steps {
             bat(script: 'docker ps', returnStatus: true)
+            archiveArtifacts(artifacts: 'target\\*.jar', fingerprint: true)
           }
         }
 
@@ -42,7 +43,6 @@ pipeline {
         stage('Testing Docker Instance') {
           steps {
             bat(script: ' docker ps', label: 'Running a docker instance in interactive mode', returnStdout: true)
-            archiveArtifacts(artifacts: 'target/*.jar', fingerprint: true)
           }
         }
 
