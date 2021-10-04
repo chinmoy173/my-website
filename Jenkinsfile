@@ -49,4 +49,7 @@ pipeline {
     }
 
   }
+  environment {
+    BUZZ_NAME = 'wORKER bEE'
+  }
 }
