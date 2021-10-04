@@ -42,6 +42,7 @@ pipeline {
         stage('Testing Docker Instance') {
           steps {
             bat(script: ' docker ps', label: 'Running a docker instance in interactive mode', returnStdout: true)
+            archiveArtifacts(artifacts: 'target/*.jar', fingerprint: true)
           }
         }
 
