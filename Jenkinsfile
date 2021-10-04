@@ -3,9 +3,9 @@ pipeline {
   stages {
     stage('Buzz Buzz') {
       parallel {
-        stage('Buzz Buzz') {
+        stage('Buzz Build') {
           steps {
-            echo 'Bees Buzz!'
+            bat(script: 'docker ps', returnStatus: true)
           }
         }
 
