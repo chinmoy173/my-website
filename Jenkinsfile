@@ -41,7 +41,7 @@ pipeline {
 
         stage('Testing Docker Instance') {
           steps {
-            bat(script: ' docker run -it ubuntu', label: 'Running a docker instance in interactive mode', returnStdout: true)
+            bat(script: ' docker run  ubuntu; docker ps;', label: 'Running a docker instance in interactive mode', returnStdout: true)
           }
         }
 
