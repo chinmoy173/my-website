@@ -6,7 +6,6 @@ pipeline {
         stage('Buzz Build') {
           steps {
             bat(script: 'docker ps', returnStatus: true)
-            archiveArtifacts(artifacts: 'target\\*.jar', fingerprint: true)
           }
         }
 
