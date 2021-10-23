@@ -1,38 +1,10 @@
 pipeline {
   agent any
   stages {
-    stage('Buzz Buzz') {
-      parallel {
-        stage('Buzz Buzz') {
-          steps {
-            echo 'Bees Buzz!'
-          }
-        }
-
-        stage('Buzz Branch') {
-          steps {
-            echo 'This a branch that i need to test'
-          }
-        }
-
-      }
-    }
-
-    stage('Bees Bees') {
-      parallel {
-        stage('Bees Bees') {
-          steps {
-            echo 'Bees Buzz'
-            echo 'Bees Buzzing Again'
-          }
-        }
-
-        stage('Testing the branch') {
-          steps {
-            echo 'I am done'
-          }
-        }
-
+    stage('Buzz Branch') {
+      steps {
+        echo 'This is the first test to bring  a machine up'
+        powershell 'cd vgdemo; vagrant up;'
       }
     }
 
