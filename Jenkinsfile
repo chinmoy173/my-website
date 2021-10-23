@@ -19,5 +19,11 @@ pipeline {
       }
     }
 
+    stage('sjkkj') {
+      steps {
+        bat 'C:\\Users\\user\\windowsbatch\\first.bat'
+      }
+    }
+
   }
 }
