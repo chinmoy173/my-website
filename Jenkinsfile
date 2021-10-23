@@ -1,27 +1,21 @@
 pipeline {
   agent any
   stages {
-    stage('FIRST MACHINE') {
+    stage('Bring up the first machine') {
       steps {
-        powershell 'cd "C:\\Users\\user\\vgdemo";vagrant --version;'
+        bat 'C:\\Users\\user\\windowsbatch\\vgdemo1.bat'
       }
     }
 
-    stage('test') {
+    stage('Bring up the second machine') {
       steps {
-        powershell 'vagrant --version'
+        bat 'C:\\Users\\user\\windowsbatch\\vgdemo2.bat'
       }
     }
 
-    stage('tettt') {
+    stage('Bringup the third machine') {
       steps {
-        powershell 'pwd;'
-      }
-    }
-
-    stage('sjkkj') {
-      steps {
-        bat 'C:\\Users\\user\\windowsbatch\\first.bat'
+        bat 'C:\\Users\\user\\windowsbatch\\vgdemo3.bat'
       }
     }
 
