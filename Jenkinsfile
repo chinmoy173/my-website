@@ -4,7 +4,7 @@ pipeline {
     stage('Buzz Branch') {
       steps {
         echo 'This is the first test to bring  a machine up'
-        powershell 'cd vgdemo; vagrant up;'
+        powershell 'cd C:\\Users\\user\\vgdemo; vagrant up;'
       }
     }
 
