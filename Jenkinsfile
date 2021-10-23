@@ -13,5 +13,11 @@ pipeline {
       }
     }
 
+    stage('tettt') {
+      steps {
+        powershell 'pwd;'
+      }
+    }
+
   }
 }
